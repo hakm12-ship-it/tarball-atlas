@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "name": "moment-timezone",
+  "version": "0.5.35",
+  "packedSize": 639171,
+  "files": [
+    {
+      "path": ".github/issue_template.md",
+      "size": 154,
+      "hash": "779a3fe7250ef446c38c3d7a26ed150868dcb35ad0eedb43517e125cee008c5c"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1097,
+      "hash": "b3a550795f41cdccdb5eb2523505ce54dc4a7a3e0d3a6d457d297591341795e7"
+    },
+    {
+      "path": "README.md",
+      "size": 2988,
+      "hash": "566828956e867cd964363f5254be6cb7f521aad87b1a8155f1d1ceff685ac0f3"
+    },
+    {
+      "path": "blah.tar.gz",
+      "size": 0,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-10-year-range.js",
+      "size": 54704,
+      "hash": "271107f8e5d8f3c3d4d2ca0c21d043fe2ed7d283f8659b8b8b141b3eb682117f"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-10-year-range.min.js",
+      "size": 42062,
+      "hash": "e9604191f0ec8ae5bb7c71747d5d13d2761f8946469614bff75d9a5aed48c4db"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-1970-2030.js",
+      "size": 152444,
+      "hash": "030e906dcd3f35d70ddf2280ebe5852a23d859aea545bc0146227ea1faa507ca"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-1970-2030.min.js",
+      "size": 139802,
+      "hash": "ad08a0f96c2d12d2dbe655aaf1949d9ad0698a68a0809da08e4ac5f65a93f4af"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-2012-2022.js",
+      "size": 56065,
+      "hash": "f55255ff62b4c4ad3e36696adff9e51fa9645db5abe8804330f4dc8cf15de371"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-2012-2022.min.js",
+      "size": 43423,
+      "hash": "ec3866de86150248c24ea6aa7c5f68ad27701b37e83cd334ccc2e8cb0bd6cb67"
+    },
+    {
+      "path": "builds/moment-timezone-with-data.js",
+      "size": 206418,
+      "hash": "627d87da67c8592cae9f63609012e04457d2f3d502f32d0834628de758d2c55d"
+    },
+    {
+      "path": "builds/moment-timezone-with-data.min.js",
+      "size": 193776,
+      "hash": "8af9b7db7ba8291a5fc96c6badc4962d23b0031ede560ff7988d9c2c8dd52320"
+    },
+    {
+      "path": "builds/moment-timezone.min.js",
+      "size": 7088,
+      "hash": "813a1204a083dce2938d3f4485ffe9ea4f1720b8ab1b1d7bc1486811504b05c1"
+    },
+    {
+      "path": "changelog.md",
+      "size": 13133,
+      "hash": "2a6c4ec6040d4d68702f1301a2908b90c27e4738cc3ef7af69e170e04bebd995"
+    },
+    {
+      "path": "composer.json",
+      "size": 862,
+      "hash": "09ce5b8edd0842b5dbd425f932a712737c05d79867f761953d016f3ee027b219"
+    },
+    {
+      "path": "curlxx.tar.gz",
+      "size": 0,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/meta/latest.json",
+      "size": 98784,
+      "hash": "1574fc70d8fd2554031aed90b1424371d6775bd9c0cab5cbd20e04753984f501"
+    },
+    {
+      "path": "data/packed/latest.json",
+      "size": 189231,
+      "hash": "ccdc6aa04df161122e948b89e0629618094a55fe7e03a70cf88952f823273b2b"
+    },
+    {
+      "path": "fix-pipeline.patch",
+      "size": 4880,
+      "hash": "afddda14f9cf8cdf309d876bb9af8ccf98cc71cc103669310c5dd48b137a3d57"
+    },
+    {
+      "path": "index.d.ts",
+      "size": 3057,
+      "hash": "3ff27a264325767dd546133238d968f649d1376dc119e790fcd1a25661685de7"
+    },
+    {
+      "path": "index.js",
+      "size": 114,
+      "hash": "b93bc1a0ab15d56e12f0e281bf005d39166952d9208b828e8d056563f3ff1fd1"
+    },
+    {
+      "path": "moment-timezone-utils.d.ts",
+      "size": 2657,
+      "hash": "d6c98241d79795637aeabaf26de83c65890de10a79dd18039fc32d380212f42e"
+    },
+    {
+      "path": "moment-timezone-utils.js",
+      "size": 7787,
+      "hash": "33f73fca1122e122fcf7a593b43c65715013750ec916ce8c25d3bae76619d36d"
+    },
+    {
+      "path": "moment-timezone.js",
+      "size": 16340,
+      "hash": "d4f4f425e20e0007b32d65e9478d9c208a446be975f9b33c72bc091589ee5b80"
+    },
+    {
+      "path": "package.json",
+      "size": 1077,
+      "hash": "3af71f078181f454d66984df422ffc1110fe67cd8767fe12b7925be7efcb747b"
+    },
+    {
+      "path": "tzdata-latest.tar.gz",
+      "size": 425833,
+      "hash": "ef7fffd9f4f50f4f58328b35022a32a5a056b245c5cb3d6791dddb342f871664"
+    }
+  ],
+  "tracked": null
+}

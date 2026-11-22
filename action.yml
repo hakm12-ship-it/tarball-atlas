@@ -1,0 +1,34 @@
+name: Tarball Atlas
+description: Check which files an npm package ships and enforce an unpacked byte budget.
+inputs:
+  working-directory:
+    description: Package directory relative to the checked-out repository.
+    required: false
+    default: '.'
+  require:
+    description: Exact package-relative file paths that must ship, one per line.
+    required: false
+    default: ''
+  forbid:
+    description: Package-relative glob patterns that must not ship, one per line.
+    required: false
+    default: ''
+  max-unpacked:
+    description: Maximum sum of unpacked file sizes in decimal bytes.
+    required: false
+    default: ''
+runs:
+  using: composite
+  steps:
+    - name: Check npm package contents
+      shell: bash
+      env:
+        ATLAS_ACTION_PATH: ${{ github.action_path }}
+        ATLAS_DIRECTORY: ${{ inputs.working-directory }}
+        ATLAS_REQUIRED: ${{ inputs.require }}
+        ATLAS_FORBIDDEN: ${{ inputs.forbid }}
+        ATLAS_MAX_UNPACKED: ${{ inputs.max-unpacked }}
+      run: node "$ATLAS_ACTION_PATH/scripts/action.mjs"
+branding:
+  icon: package
+  color: blue

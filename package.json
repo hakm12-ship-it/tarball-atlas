@@ -1,0 +1,45 @@
+{
+  "name": "tarball-atlas",
+  "version": "1.0.0",
+  "description": "See exactly which files changed the size of an npm release. Browser, offline HTML reports, and a zero-dependency CLI.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "tarball-atlas": "./bin/atlas.mjs"
+  },
+  "files": [
+    "bin",
+    "offline/atlas.html",
+    "docs/lib",
+    "LICENSE",
+    "README.md",
+    "README.ko.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakm12-ship-it/tarball-atlas.git"
+  },
+  "homepage": "https://hakm12-ship-it.github.io/tarball-atlas/",
+  "bugs": {
+    "url": "https://github.com/hakm12-ship-it/tarball-atlas/issues"
+  },
+  "keywords": [
+    "npm",
+    "tarball",
+    "package-size",
+    "release",
+    "diff",
+    "treemap",
+    "ci"
+  ],
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hakm12-ship-it.github.io/tarball-atlas/sitemap.xml

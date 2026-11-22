@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tarball Atlas · Visual npm package diff</title>
+  <meta name="description" content="Compare two npm releases or local tarballs. Explore a file-size treemap, find same-size edits with SHA-256, and export an interactive offline HTML report.">
+  <meta name="theme-color" content="#17271f">
+  <link rel="canonical" href="https://hakm12-ship-it.github.io/tarball-atlas/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tarball Atlas · Where did the bytes go?">
+  <meta property="og:description" content="A file-by-file visual diff for npm releases, with local inputs and offline reports.">
+  <meta property="og:url" content="https://hakm12-ship-it.github.io/tarball-atlas/">
+  <meta property="og:image" content="https://hakm12-ship-it.github.io/tarball-atlas/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<a href="#report" class="skip">Skip to report</a>
+<header class="top"><div class="wrap top-inner">
+  <a class="brand" href="https://hakm12-ship-it.github.io/tarball-atlas/" aria-label="Tarball Atlas home"><img src="./icon.svg" width="35" height="35" alt=""><span>Tarball <b>Atlas</b></span></a>
+  <nav aria-label="Project"><a href="#inputs" class="nav-active">Explorer</a><a href="https://github.com/hakm12-ship-it/tarball-atlas#command-line">CLI docs</a><a class="repo" href="https://github.com/hakm12-ship-it/tarball-atlas">GitHub <span aria-hidden="true">↗</span></a></nav>
+</div></header>
+<main class="wrap">
+  <section class="intro"><p class="overline"><i></i> NPM PACKAGE DIFF</p><h1>Where did the bytes go<span>?</span></h1><p>Compare two releases and trace every byte back to a file.</p></section>
+  <section class="inputs" id="inputs" aria-label="Choose comparison inputs">
+    <div class="input-heading"><div class="switch" role="group" aria-label="Input mode"><button id="registry-mode" aria-pressed="true">npm registry</button><button id="file-mode" aria-pressed="false">Local files</button></div><button type="button" id="example" class="quiet">Load example <span aria-hidden="true">↺</span></button></div>
+    <form id="registry-form" class="input-row">
+      <label>Baseline<input required id="before-spec" value="moment-timezone@0.5.34" spellcheck="false" autocomplete="off" aria-label="Baseline npm package and version"></label>
+      <span class="flow" aria-hidden="true">→</span>
+      <label>Candidate<input required id="after-spec" value="moment-timezone@0.5.35" spellcheck="false" autocomplete="off" aria-label="Candidate npm package and version"></label>
+      <button type="submit" class="primary">Compare releases <span aria-hidden="true">↗</span></button>
+    </form>
+    <form id="file-form" class="input-row" hidden>
+      <div class="source-choice"><label for="baseline-source" class="sr">Baseline source</label><select id="baseline-source"><option value="file">Baseline file</option><option value="registry">Published baseline</option></select>
+      <input required type="file" id="before-file" aria-label="Baseline file" accept=".tgz,.gz,.json">
+      <input type="text" id="published-base" aria-label="Published baseline package and version" placeholder="package@version" spellcheck="false" autocomplete="off" hidden disabled></div><span class="flow" aria-hidden="true">→</span>
+      <label>Candidate file<input required type="file" id="after-file" accept=".tgz,.gz,.json"></label>
+      <button type="submit" class="primary">Compare files <span aria-hidden="true">↗</span></button>
+      <p class="hint">Use .tgz archives, Atlas snapshots, or npm pack JSON. Choose a published baseline to compare against npm. Local files stay in this browser.</p>
+    </form>
+    <p class="message" id="message" role="status" aria-live="polite" hidden></p>
+  </section>
+  <section id="report" aria-labelledby="report-name" hidden>
+    <div class="report-head"><div><p class="overline" id="report-kind">RELEASE COMPARISON</p><h2 id="report-name"></h2><p class="versions" id="versions"></p></div>
+      <div class="report-actions"><button type="button" id="share" class="secondary" hidden>Copy link</button><button type="button" id="export" class="secondary">Export HTML <span aria-hidden="true">↓</span></button></div></div>
+    <div class="metrics" id="metrics"></div>
+    <div class="analysis">
+      <article class="map-card"><div class="map-head"><div><p class="overline">SIZE DISTRIBUTION</p><h3>File map</h3></div>
+        <label class="map-select"><span class="sr">Map area by</span><select id="map-mode"><option value="after">Candidate size</option><option value="delta">Absolute change</option><option value="before">Baseline size</option></select></label></div>
+        <div id="map" aria-label="File size treemap"></div><div class="map-foot"><div class="legend"><span><i class="sw-add"></i>Added</span><span><i class="sw-change"></i>Changed</span><span><i class="sw-other"></i>Other</span></div><span id="map-caption"></span></div>
+      </article>
+      <article class="drivers"><div class="drivers-head"><p class="overline">UNPACKED BYTES</p><h3>Top movers</h3></div><div id="movers"></div></article>
+    </div>
+    <section class="files"><div class="files-head"><h3>File ledger</h3><div class="filters"><input type="search" id="search" aria-label="Filter paths" placeholder="Filter paths…"><select id="status-filter" aria-label="Filter file status"><option value="all">All statuses</option><option value="added">Added</option><option value="changed">Changed</option><option value="removed">Removed</option><option value="unchanged">Unchanged</option><option value="unknown">Unverified</option></select></div></div>
+    <div class="ledger-wrap"><table><thead><tr><th scope="col">File path</th><th scope="col">Status</th><th scope="col">Baseline</th><th scope="col">Candidate</th><th scope="col"><button id="sort" aria-label="Change file sort order">Change ↓</button></th></tr></thead><tbody id="ledger"></tbody></table></div>
+    <div class="ledger-foot"><span id="row-count"></span><button id="more" class="quiet" hidden>Show more</button></div></section>
+    <details id="git-state" hidden><summary>Git tracking in the candidate</summary><div id="git-detail"></div></details>
+  </section>
+  <noscript>Enable JavaScript for the interactive file map, or use the Tarball Atlas command-line tool on GitHub.</noscript>
+  <dialog id="details"><div class="dialog-head"><p class="overline">FILE DETAILS</p><button id="close-details" aria-label="Close file details">×</button></div><h3 id="detail-path"></h3><div id="detail-stats"></div></dialog>
+</main>
+<footer class="wrap"><span>Tarball Atlas</span><a href="https://github.com/hakm12-ship-it/tarball-atlas">Source on GitHub ↗</a><a href="https://github.com/hakm12-ship-it/tarball-atlas/issues">Report an issue ↗</a></footer>
+<script id="report-data" type="application/json">null</script>
+<script type="module" src="./app.mjs"></script>
+</body></html>

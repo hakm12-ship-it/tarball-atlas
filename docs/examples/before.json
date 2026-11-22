@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "name": "moment-timezone",
+  "version": "0.5.34",
+  "packedSize": 217410,
+  "files": [
+    {
+      "path": ".github/issue_template.md",
+      "size": 154,
+      "hash": "779a3fe7250ef446c38c3d7a26ed150868dcb35ad0eedb43517e125cee008c5c"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1097,
+      "hash": "b3a550795f41cdccdb5eb2523505ce54dc4a7a3e0d3a6d457d297591341795e7"
+    },
+    {
+      "path": "README.md",
+      "size": 2988,
+      "hash": "566828956e867cd964363f5254be6cb7f521aad87b1a8155f1d1ceff685ac0f3"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-10-year-range.js",
+      "size": 55126,
+      "hash": "29460a44a0ecce0023b658980557c8f4f26ce24e131cf9e46361c5003f57a44a"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-10-year-range.min.js",
+      "size": 42484,
+      "hash": "7ed17775731ec99f940c02d17c8944d31c3e2f6d2884369af025e47285468720"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-1970-2030.js",
+      "size": 152444,
+      "hash": "d604efbb9e4662e79650e5578e0b19a591a8f54a449240eb4eefb86f23bcc6e6"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-1970-2030.min.js",
+      "size": 139802,
+      "hash": "57bf5cf5d3d8ea3293d8a435dba1362af75ce94dcb48e76b64a475ed0a951c1c"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-2012-2022.js",
+      "size": 56065,
+      "hash": "95e27858174014dd352e31a379aed42a10135ffb05552184c1afd99f9bd09358"
+    },
+    {
+      "path": "builds/moment-timezone-with-data-2012-2022.min.js",
+      "size": 43423,
+      "hash": "62603b3e8153d7ec381347e358a847291d969727c83b39d784b7039cb9cf5b1d"
+    },
+    {
+      "path": "builds/moment-timezone-with-data.js",
+      "size": 206418,
+      "hash": "e5dda007341c3bae59c9ad9e7ecee4107a6222d0b2f97890a0c81c9289ad4826"
+    },
+    {
+      "path": "builds/moment-timezone-with-data.min.js",
+      "size": 193776,
+      "hash": "bdfa0f1c489adc3402c91d6344e596fce29641322b1195dd46e89320debc8789"
+    },
+    {
+      "path": "builds/moment-timezone.min.js",
+      "size": 7088,
+      "hash": "6c7d7957d7c391d33555e26b6fb10b1fd8a7090f74514f04089af57fafad08d5"
+    },
+    {
+      "path": "changelog.md",
+      "size": 12847,
+      "hash": "cd3d5ea8cb5567a28c8e6b1963daa4a718690161e7e9585ba9bcfe0509388c94"
+    },
+    {
+      "path": "composer.json",
+      "size": 862,
+      "hash": "af69db7f8a3e8bcb7d81554154704581aa7a7331128523a4ff7428dabd4ced7f"
+    },
+    {
+      "path": "data/meta/latest.json",
+      "size": 98784,
+      "hash": "1574fc70d8fd2554031aed90b1424371d6775bd9c0cab5cbd20e04753984f501"
+    },
+    {
+      "path": "data/packed/latest.json",
+      "size": 189231,
+      "hash": "ccdc6aa04df161122e948b89e0629618094a55fe7e03a70cf88952f823273b2b"
+    },
+    {
+      "path": "index.d.ts",
+      "size": 3057,
+      "hash": "3ff27a264325767dd546133238d968f649d1376dc119e790fcd1a25661685de7"
+    },
+    {
+      "path": "index.js",
+      "size": 114,
+      "hash": "b93bc1a0ab15d56e12f0e281bf005d39166952d9208b828e8d056563f3ff1fd1"
+    },
+    {
+      "path": "moment-timezone-utils.d.ts",
+      "size": 2657,
+      "hash": "d6c98241d79795637aeabaf26de83c65890de10a79dd18039fc32d380212f42e"
+    },
+    {
+      "path": "moment-timezone-utils.js",
+      "size": 7787,
+      "hash": "94fffcffef95e274aa5a7a88f3f1e48dd3515c67db05e898aaa0bf694f9ab522"
+    },
+    {
+      "path": "moment-timezone.js",
+      "size": 16340,
+      "hash": "183f03352f1e65da2130b89bced0e02d59bdff8a20eb844d98a803462ec99b4c"
+    },
+    {
+      "path": "package.json",
+      "size": 1077,
+      "hash": "5bee649055d5b079224e94fafe11dc72958cb4d78508be49f1d32be74dbf7e23"
+    }
+  ],
+  "tracked": null
+}
